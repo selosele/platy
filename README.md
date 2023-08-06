@@ -6,5 +6,5 @@
 
 ## 기술스택
 
-- LAMP 스택: `Linux(WSL2 Ubuntu 22.04 LTS)`, `Apache2`, `MySQL`, `PHP 8.1.2(Laravel 10.17.1)`
+- LAMP 스택: `Linux(WSL2 Ubuntu 22.04 LTS)`, `Apache2(2.4.52)`, `MySQL(8.0.33)`, `PHP 8.1.2(Laravel 10.17.1)`
 - 그 외에 사용한 기술: `Tailwind CSS`
