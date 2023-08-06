@@ -17,7 +17,7 @@ class RouteServiceProvider extends ServiceProvider
     public const HOME = '/';
 
     /**
-     * 앱의 로그인 라우트 경로
+     * 앱의 로그인 라우트 경로(name)
      * @var string
      */
     public const SIGNIN = 'sign-in';

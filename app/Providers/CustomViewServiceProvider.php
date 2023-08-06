@@ -8,14 +8,6 @@ use Illuminate\Support\Facades\View;
 class CustomViewServiceProvider extends ServiceProvider
 {
     /**
-     * Register services.
-     */
-    public function register(): void
-    {
-        //
-    }
-
-    /**
      * Bootstrap services.
      */
     public function boot(): void
