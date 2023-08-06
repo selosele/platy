@@ -6,4 +6,4 @@ use App\Providers\RouteServiceProvider;
 
 // 로그인 페이지
 Route::get('/sign-in', [SignInController::class, 'signIn'])
-  ->name(RouteServiceProvider::SIGNIN);
+  ->name(RouteServiceProvider::SIGN_IN);

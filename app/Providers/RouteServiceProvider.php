@@ -20,7 +20,7 @@ class RouteServiceProvider extends ServiceProvider
      * 앱의 로그인 라우트 경로(name)
      * @var string
      */
-    public const SIGNIN = 'sign-in';
+    public const SIGN_IN = 'sign-in';
 
     public function boot(): void
     {

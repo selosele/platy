@@ -7,9 +7,6 @@ use Illuminate\Support\Facades\View;
 
 class CustomViewServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap services.
-     */
     public function boot(): void
     {
         // 기본 View 경로 설정
