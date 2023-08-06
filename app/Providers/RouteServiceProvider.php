@@ -11,17 +11,17 @@ use Illuminate\Support\Facades\Route;
 class RouteServiceProvider extends ServiceProvider
 {
     /**
-     * The path to your application's "home" route.
-     *
-     * Typically, users are redirected here after authentication.
-     *
+     * 앱의 메인 라우트 경로
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = '/';
 
     /**
-     * Define your route model bindings, pattern filters, and other route configuration.
+     * 앱의 로그인 라우트 경로
+     * @var string
      */
+    public const SIGNIN = 'sign-in';
+
     public function boot(): void
     {
         RateLimiter::for('api', function (Request $request) {
@@ -31,10 +31,10 @@ class RouteServiceProvider extends ServiceProvider
         $this->routes(function () {
             Route::middleware('api')
                 ->prefix('api')
-                ->group(base_path('routes/api.php'));
+                ->group(base_path('routes/api/api.php'));
 
             Route::middleware('web')
-                ->group(base_path('routes/web.php'));
+                ->group(base_path('routes/web/web.php'));
         });
     }
 }
