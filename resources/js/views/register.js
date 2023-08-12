@@ -7,7 +7,7 @@ document.querySelector('#registerBtn').addEventListener('click', () => {
   document.querySelector('#registerForm').submit();
 });
 
-/** 회원가입 form 값이 유효한지 확인한다. */
+/** 회원가입 form 값의 유효성을 검사한다. */
 function isValid() {
   const memAcnt = document.querySelector('#memAcnt');
   const memEmail = document.querySelector('#memEmail');
@@ -23,7 +23,7 @@ function isValid() {
   return true;
 }
 
-/** 아이디 유효성 검사 */
+/** 아이디 유효성을 검사한다. */
 function isIdValid(memAcnt) {
   if (isBlank(memAcnt.value)) {
     alert('아이디를 입력하세요.');
@@ -40,7 +40,7 @@ function isIdValid(memAcnt) {
   return true;
 }
 
-/** 이메일 유효성 검사 */
+/** 이메일 유효성을 검사한다. */
 function isEmailValid(memEmail) {
   if (isBlank(memEmail.value)) {
     alert('이메일을 입력하세요.');
@@ -51,7 +51,7 @@ function isEmailValid(memEmail) {
   return true;
 }
 
-/** 닉네임 유효성 검사 */
+/** 닉네임 유효성을 검사한다. */
 function isNickNameValid(memNknm) {
   if (isBlank(memNknm.value)) {
     alert('닉네임을 입력하세요.');
@@ -68,7 +68,7 @@ function isNickNameValid(memNknm) {
   return true;
 }
 
-/** 비밀번호 유효성 검사 */
+/** 비밀번호 유효성을 검사한다. */
 function isPasswordValid(memPswd, memPswdChk) {
   if (isBlank(memPswd.value)) {
     alert('비밀번호를 입력하세요.');
