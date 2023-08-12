@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* 플러그인 */
+/* 라이브러리 */
 @import url('./global/plugins/index.css');
 
 /* 전역 스타일 */
@@ -9,5 +9,5 @@
 /* 레이아웃 */
 @import url('./layout/index.css');
 
-/* views */
+/* Views */
 @import url('./views/index.css');

@@ -6,5 +6,5 @@ import './global/plugins';
 // CSS
 import '../css/app.css';
 
-// 유틸리티 JS 
+// 유틸리티
 import '../js/global/util';
