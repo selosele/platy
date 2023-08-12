@@ -7,7 +7,6 @@ use Illuminate\Support\ServiceProvider;
 
 class ConsoleServiceProvider extends ServiceProvider
 {
-
     public function register()
     {
         App::bind('consoleOutput', function() {
