@@ -5,10 +5,10 @@
 
       <ul class="links">
         <li>
-          <a href="/sign-in">로그인</a>
+          <a href="/auth/sign-in">로그인</a>
         </li>
         <li>
-          <a href="/register">회원가입</a>
+          <a href="/auth/register">회원가입</a>
         </li>
       </ul>
     </div>

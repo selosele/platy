@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+/* 플러그인 */
+@import url('./global/plugins/bootstrap/bootstrap.min.css');
+
 /* 공통 스타일 */
 @import url('./global/font.css');
 @import url('./global/core.css');
@@ -11,3 +14,4 @@
 
 /* views */
 @import url('./views/sign-in.css');
+@import url('./views/register.css');

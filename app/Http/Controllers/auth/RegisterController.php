@@ -7,17 +7,17 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 /**
- * 로그인 컨트롤러
+ * 회원가입 컨트롤러
  */
-class SignInController extends Controller
+class RegisterController extends Controller
 {
     public function view()
     {
-        return view('auth/sign-in');
+        return view('auth/register');
     }
 
-    public function signIn(Request $request)
+    public function register(Request $request)
     {
-        
+        Console::writeln();
     }
 }
