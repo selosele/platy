@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Models\Auth;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -8,9 +8,22 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+/**
+ * 회원
+ */
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+
+    /**
+     * 테이블명
+     */
+    protected $table = 'MEMBER';
+
+    /**
+     * timestamps 비활성화
+     */
+    public $timestamps = false;
 
     /**
      * The attributes that are mass assignable.
@@ -18,9 +31,12 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'MEM_ACNT',
+        'MEM_EMAIL',
+        'MEM_NKNM',
+        'MEM_PSWD',
+        'MEM_IMG_FILE_NO',
+        'MEM_REG_DT',
     ];
 
     /**
@@ -29,7 +45,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
+        'MEM_PSWD',
         'remember_token',
     ];
 
@@ -40,6 +56,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'password' => 'hashed',
+        'MEM_PSWD' => 'hashed',
+        'MEM_REG_DT' => 'datetime',
     ];
 }

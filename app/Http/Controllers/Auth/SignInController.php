@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\auth;
+namespace App\Http\Controllers\Auth;
 
 use App\Facades\Console;
 use App\Http\Controllers\Controller;
@@ -13,7 +13,7 @@ class SignInController extends Controller
 {
     public function view()
     {
-        return view('auth/sign-in');
+        return view('auth.sign-in');
     }
 
     public function signIn(Request $request)

@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\auth\RegisterController;
-use App\Http\Controllers\auth\SignInController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\SignInController;
 use App\Providers\RouteServiceProvider;
 
 // 회원가입 페이지
