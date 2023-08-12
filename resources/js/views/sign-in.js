@@ -1,14 +1,10 @@
-import axios from "axios";
-import { isBlank, serialize } from "../global/util";
+import { isBlank } from "../global/util";
 
 // 로그인 버튼 클릭 시
 document.querySelector('#signInBtn').addEventListener('click', () => {
   if (!isValid()) return;
   
-  axios.post('/sign-in', { signInDto: serialize(document.querySelector('#signInForm')) })
-  .then(response => {
-    console.log(response);
-  });
+  document.querySelector('#signInForm').submit();
 });
 
 /** 로그인 form 값이 유효한지 확인한다. */

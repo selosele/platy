@@ -17,8 +17,3 @@ export function isBlank(value) {
 export function isNotBlank(value) {
   return !isBlank(value);
 }
-
-/** form values -> JSON으로 가공 */
-export function serialize(form) {
-  return new FormData(form);
-}
