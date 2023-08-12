@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-.register__wrap {
-  width: 22rem;
-  margin: 0 auto;
+.register__wrap .input-group-text {
+  width: 7.1rem;
 }

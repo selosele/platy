@@ -2,7 +2,7 @@ import { isBlank } from "../global/util";
 
 // 로그인 버튼 클릭 시
 document.querySelector('#signInBtn').addEventListener('click', () => {
-  if (!isValid()) return;
+  if (!isValid()) { return; }
   
   document.querySelector('#signInForm').submit();
 });

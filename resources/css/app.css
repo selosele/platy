@@ -1,17 +1,13 @@
 @charset "utf-8";
 
 /* 플러그인 */
-@import url('./global/plugins/bootstrap/bootstrap.min.css');
+@import url('./global/plugins/index.css');
 
-/* 공통 스타일 */
-@import url('./global/font.css');
-@import url('./global/core.css');
+/* 전역 스타일 */
+@import url('./global/index.css');
 
 /* 레이아웃 */
-@import url('./layout/header.css');
-@import url('./layout/footer.css');
-@import url('./layout/main.css');
+@import url('./layout/index.css');
 
 /* views */
-@import url('./views/sign-in.css');
-@import url('./views/register.css');
+@import url('./views/index.css');

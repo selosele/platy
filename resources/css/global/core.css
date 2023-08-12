@@ -10,3 +10,14 @@ body {
 a {
   text-decoration: none;
 }
+
+/* Bootstrap */
+.input-group-text {
+  justify-content: center;
+}
+
+/* 콘텐츠 영역 크기가 작은 경우 */
+.mini-content {
+  width: 22rem;
+  margin: 0 auto;
+}
