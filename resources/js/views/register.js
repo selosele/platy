@@ -1,11 +1,22 @@
 import { isBlank } from "../global/util";
 
+// 비밀번호 입력 시 CapsLock 키 입력 감지
+document.querySelector('#memPswd').addEventListener('keyup', detectCapsLock);
+document.querySelector('#memPswdChk').addEventListener('keyup', detectCapsLock);
+
 // 회원가입 버튼 클릭 시
 document.querySelector('#registerBtn').addEventListener('click', () => {
   if (!isValid()) { return; }
   
   document.querySelector('#registerForm').submit();
 });
+
+/** 비밀번호 CapsLock 키 입력을 감지한다. */
+function detectCapsLock(event) {
+  if (event.getModifierState('CapsLock')) {
+    console.log('ㅇㅇ'); // Form 유효성검사 라이브러리로 대체 가능한지 확인하기
+  }
+}
 
 /** 회원가입 form 값의 유효성을 검사한다. */
 function isValid() {
