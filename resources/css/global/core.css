@@ -16,6 +16,20 @@ a {
   justify-content: center;
 }
 
+/* parsleyjs */
+.parsley-errors-list {
+  width: 100%;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.parsley-errors-list > li {
+  font-size: 0.75rem;
+  color: #c44;
+}
+
 /* 콘텐츠 영역 크기가 작은 경우 */
 .mini-content {
   width: 22rem;

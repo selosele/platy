@@ -35,8 +35,6 @@ class User extends Authenticatable
         'MEM_EMAIL',
         'MEM_NKNM',
         'MEM_PSWD',
-        'MEM_IMG_FILE_NO',
-        'MEM_REG_DT',
     ];
 
     /**

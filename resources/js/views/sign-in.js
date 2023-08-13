@@ -1,4 +1,4 @@
-import { isBlank } from "../global/util";
+import { isBlank } from "../global/utils";
 
 // 로그인 버튼 클릭 시
 document.querySelector('#signInBtn').addEventListener('click', () => {

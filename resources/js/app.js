@@ -7,4 +7,4 @@ import './global/plugins';
 import '../css/app.css';
 
 // 유틸리티
-import '../js/global/util';
+import '../js/global/utils';
