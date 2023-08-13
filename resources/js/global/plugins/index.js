@@ -1,8 +1,8 @@
+// Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // jQuery
-export * from './jquery/jquery-3.3.1.slim.min';
+import 'jquery';
 
-// Bootstrap
-export * from './bootstrap/bootstrap.bundle.min';
-
-// Popper
-export * from './popper/popper.min';
+// Bootstrap JS
+import 'bootstrap';
