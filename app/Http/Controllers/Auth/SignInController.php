@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
  */
 class SignInController extends Controller
 {
-    public function view()
+    public function page()
     {
         return view('auth.sign-in');
     }

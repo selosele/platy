@@ -21,7 +21,7 @@ class RegisterController extends Controller
     /**
      * 회원가입 페이지
      */
-    public function view()
+    public function page()
     {
         return view('auth.register');
     }
@@ -46,6 +46,6 @@ class RegisterController extends Controller
         ]);
 
         return redirect($this->redirectTo)
-            ->with('success', '가입이 완료되었습니다. 로그인해주세요.');
+            ->with('registerOk', '가입이 완료되었습니다. 로그인해주세요.');
     }
 }

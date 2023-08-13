@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
  */
 class IndexController extends Controller
 {
-    public function view()
+    public function page()
     {
         return view('index');
     }

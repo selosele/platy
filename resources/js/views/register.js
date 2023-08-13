@@ -6,7 +6,7 @@ document.querySelector('#memPswdChk').addEventListener('keyup', detectCapsLock);
 
 // 회원가입 버튼 클릭 시
 document.querySelector('#registerBtn').addEventListener('click', () => {
-  if (!isValid()) { return; }
+  if (!isValid() || !confirm('가입하시겠습니까?')) { return; }
   
   document.querySelector('#registerForm').submit();
 });

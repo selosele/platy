@@ -5,9 +5,9 @@
 @section('content')
 <div class="sign-in__wrap mini-content">
   
-  @if (session('success'))
+  @if (session('registerOk'))
     <div class="alert alert-success">
-      {{ session('success') }}
+      {{ session('registerOk') }}
     </div>
   @endif
 
@@ -16,16 +16,6 @@
     <div class="input-group mb-3">
       <label for="memAcnt" class="input-group-text">아이디</label>
       <input type="text" class="form-control" id="memAcnt" name="memAcnt" placeholder="아이디를 입력하세요">
-    </div>
-
-    <div class="input-group mb-3">
-      <label for="memEmail" class="input-group-text">이메일</label>
-      <input type="text" class="form-control" id="memEmail" name="memEmail" placeholder="이메일주소를 입력하세요">
-    </div>
-
-    <div class="input-group mb-3">
-      <label for="memNickname" class="input-group-text">닉네임</label>
-      <input type="text" class="form-control" id="memNickname" name="memNickname" placeholder="닉네임을 입력하세요">
     </div>
 
     <div class="input-group mb-3">
