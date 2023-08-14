@@ -9,6 +9,9 @@ use App\Http\Controllers\Controller;
  */
 class IndexController extends Controller
 {
+    /**
+     * 메인 페이지를 출력한다.
+     */
     public function page()
     {
         return view('index');

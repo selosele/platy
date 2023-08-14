@@ -5,15 +5,15 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\SignInController;
 use App\Providers\RouteServiceProvider;
 
-// 회원가입 페이지
+// 회원가입 페이지 출력
 Route::get('/auth/register', [RegisterController::class, 'page']);
 
-// 회원가입
+// 회원가입 수행
 Route::post('/auth/register', [RegisterController::class, 'register']);
 
-// 로그인 페이지
+// 로그인 페이지 출력
 Route::get('/auth/sign-in', [SignInController::class, 'page'])
   ->name(RouteServiceProvider::SIGN_IN);
 
-// 로그인
+// 로그인 수행
 Route::post('/auth/sign-in', [SignInController::class, 'signIn']);

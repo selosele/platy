@@ -11,11 +11,17 @@ use Illuminate\Http\Request;
  */
 class SignInController extends Controller
 {
+    /**
+     * 로그인 페이지를 출력한다.
+     */
     public function page()
     {
         return view('auth.sign-in');
     }
 
+    /**
+     * 로그인을 수행한다.
+     */
     public function signIn(Request $request)
     {
         
