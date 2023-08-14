@@ -9,8 +9,12 @@ validate('#registerForm', function() {
   });
 });
 
-// 아이디 필드 keyup 이벤트
-document.querySelector('#memAcnt').addEventListener('keyup', function(e) {
+document.querySelector('#memAcnt').addEventListener('keyup', checkAcnt);
+document.querySelector('#memPswd').addEventListener('keyup', detectCapsLockKey);
+document.querySelector('#memPswdChk').addEventListener('keyup', detectCapsLockKey);
+
+/** 아이디의 중복을 검증한다. */
+function checkAcnt(e) {
   const target = e.target;
   const submitBtn = document.querySelector('#registerBtn');
 
@@ -36,4 +40,15 @@ document.querySelector('#memAcnt').addEventListener('keyup', function(e) {
     target.classList.add('is-valid');
     submitBtn.removeAttribute('disabled');
   });
-});
+}
+
+/** 비밀번호 입력 시, CapsLock키의 입력을 감지한다. */
+function detectCapsLockKey(e) {
+  if (e.getModifierState('CapsLock')) {
+    e.target.classList.add('is-invalid');
+    message.toastWarning('CapsLock키가 켜져 있습니다.');
+    return;
+  }
+
+  e.target.classList.remove('is-invalid');
+}
