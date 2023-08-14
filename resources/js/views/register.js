@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { http, isBlank, message, validate } from '../global/utils';
+import { validationError, http, isBlank, message, validate } from '../global/utils';
 
 // 회원가입 Form 유효성 검증
 validate('#registerForm', function() {
@@ -30,15 +30,17 @@ function checkAcnt(e) {
 
     // 0: 중복 X, 1: 중복
     if (resp.data === 1) {
-      message.toastWarning('사용할 수 없는 아이디입니다.');
-      target.classList.add('is-invalid');
       submitBtn.setAttribute('disabled', true);
+
+      if (!validationError('wrongid')) {
+        $('#memAcnt').parsley().addError('wrongid', { message: '사용할 수 없는 아이디입니다.' });
+      }
+      
       return;
     }
     
-    target.classList.remove('is-invalid');
-    target.classList.add('is-valid');
     submitBtn.removeAttribute('disabled');
+    $('#memAcnt').parsley().removeError('wrongid');
   });
 }
 
@@ -46,9 +48,14 @@ function checkAcnt(e) {
 function detectCapsLockKey(e) {
   if (e.getModifierState('CapsLock')) {
     e.target.classList.add('is-invalid');
-    message.toastWarning('CapsLock키가 켜져 있습니다.');
+
+    if (!validationError(`capslock-${e.target.id}`)) {
+      $(e.target).parsley().addError(`capslock-${e.target.id}`, { message: 'CapsLock키가 켜져 있습니다.' });
+    }
+    
     return;
   }
 
   e.target.classList.remove('is-invalid');
+  $(e.target).parsley().removeError(`capslock-${e.target.id}`);
 }

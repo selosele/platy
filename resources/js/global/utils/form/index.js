@@ -16,3 +16,8 @@ export function validate(form, callback) {
     }
   });
 }
+
+/** 특정 필드에 유효성 오류가 있는지 검증한다. */
+export function validationError(field) {
+  return 0 < document.querySelectorAll(`.parsley-${field}`).length ? true : false;
+}
