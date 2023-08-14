@@ -1,17 +1,10 @@
-import { message } from '../global/utils';
 import $ from 'jquery';
-import 'parsleyjs';
-import 'parsleyjs/src/i18n/ko';
+import { message, validate } from '../global/utils';
 
 $(function(){
 
-  // 이 과정을 모듈화하기
-  $('#registerForm').on('submit', function(e) {
-    e.preventDefault();
-    $(this).parsley().validate();
-
-    if (!$(this).parsley().isValid()) { return false; }
-
+  // 회원가입 Form 유효성 검증
+  validate('#registerForm', function() {
     message.confirmSuccess('가입하시겠습니까?').then(confirm => {
       if (!confirm) return;
       $('#registerForm').off('submit').submit();
