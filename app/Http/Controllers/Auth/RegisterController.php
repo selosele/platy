@@ -19,7 +19,7 @@ class RegisterController extends Controller
     protected $redirectTo = '/' . RouteServiceProvider::SIGN_IN;
 
     /**
-     * 회원가입 페이지
+     * 회원가입 페이지를 출력한다.
      */
     public function page()
     {
@@ -27,7 +27,7 @@ class RegisterController extends Controller
     }
 
     /**
-     * 회원가입
+     * 회원가입을 수행한다.
      */
     public function register(Request $request)
     {
@@ -47,5 +47,16 @@ class RegisterController extends Controller
 
         return redirect($this->redirectTo)
             ->with('registerOk', '가입이 완료되었습니다. 로그인해주세요.');
+    }
+
+    /**
+     * 아이디의 중복을 검증한다.
+     */
+    public function checkAcnt(string $acnt): int
+    {
+        $foundUser = User::where('MEM_ACNT', $acnt)->first();
+        
+        // 유저가 존재하면 1, 아니면 0을 반환
+        return $foundUser ? 1 : 0;
     }
 }

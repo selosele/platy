@@ -11,6 +11,12 @@ a {
   text-decoration: none;
 }
 
+input[disabled],
+button[disabled] {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 /* Bootstrap */
 .input-group-text {
   justify-content: center;

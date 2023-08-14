@@ -28,7 +28,7 @@
       <label class="form-check-label" for="rememberMe">로그인 상태 유지</label>
     </div>
 
-    <button type="button" class="btn btn-primary w-100" id="signInBtn">로그인</button>
+    <button type="button" class="btn btn-primary w-100">로그인</button>
   </form>
 </div>
 @endsection
