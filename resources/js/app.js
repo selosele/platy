@@ -1,5 +1,3 @@
-import './bootstrap';
-
 // 플러그인
 import './global/plugins';
 
