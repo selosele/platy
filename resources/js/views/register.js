@@ -32,15 +32,15 @@ function checkAcnt(e) {
     if (resp.data === 1) {
       submitBtn.setAttribute('disabled', true);
 
-      if (!validationError('wrongid')) {
-        $('#memAcnt').parsley().addError('wrongid', { message: '사용할 수 없는 아이디입니다.' });
+      if (!validationError('wrongId')) {
+        $('#memAcnt').parsley().addError('wrongId', { message: '사용할 수 없는 아이디입니다.' });
       }
       
       return;
     }
     
     submitBtn.removeAttribute('disabled');
-    $('#memAcnt').parsley().removeError('wrongid');
+    $('#memAcnt').parsley().removeError('wrongId');
   });
 }
 
@@ -49,13 +49,13 @@ function detectCapsLockKey(e) {
   if (e.getModifierState('CapsLock')) {
     e.target.classList.add('is-invalid');
 
-    if (!validationError(`capslock-${e.target.id}`)) {
-      $(e.target).parsley().addError(`capslock-${e.target.id}`, { message: 'CapsLock키가 켜져 있습니다.' });
+    if (!validationError(`capsLock-${e.target.id}`)) {
+      $(e.target).parsley().addError(`capsLock-${e.target.id}`, { message: 'CapsLock키가 켜져 있습니다.' });
     }
     
     return;
   }
 
   e.target.classList.remove('is-invalid');
-  $(e.target).parsley().removeError(`capslock-${e.target.id}`);
+  $(e.target).parsley().removeError(`capsLock-${e.target.id}`);
 }
