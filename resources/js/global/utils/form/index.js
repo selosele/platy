@@ -28,3 +28,8 @@ export function addValidationError(el, field, options) {
     $(el).parsley().addError(field, options);
   }
 }
+
+/** 유효성 오류를 제거한다. */
+export function removeValidationError(el, field) {
+  $(el).parsley().removeError(field);
+}

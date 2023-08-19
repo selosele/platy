@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { http, isBlank, message, validate, addValidationError } from '../global/utils';
+import { http, isBlank, message, validate, addValidationError, removeValidationError } from '../global/utils';
 
 // 회원가입 Form 유효성 검증
 validate('#registerForm', function() {
@@ -36,7 +36,7 @@ function checkAccount(e) {
     }
     
     submitBtn.removeAttribute('disabled');
-    $('#account').parsley().removeError('wrongId');
+    removeValidationError('#account', 'wrongId');
   });
 }
 
@@ -49,5 +49,5 @@ function detectCapsLockKey(e) {
   }
 
   e.target.classList.remove('is-invalid');
-  $(e.target).parsley().removeError(`capsLock-${e.target.id}`);
+  removeValidationError(e.target, `capsLock-${e.target.id}`);
 }
