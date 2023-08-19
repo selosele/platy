@@ -3,8 +3,8 @@
 @section('title', '회원가입')
 
 @section('content')
-<div class="register__wrap mini-content" data-parsley-validate>
-  <form method="post" action="/auth/register" id="registerForm">
+<div class="register__wrap mini-content">
+  <form method="post" action="/auth/register" id="registerForm" data-parsley-validate>
     @csrf
     <div class="input-group mb-3">
       <label for="account" class="input-group-text">아이디</label>

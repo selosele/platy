@@ -52,7 +52,7 @@ class RegisterController extends Controller
     /**
      * 아이디의 중복을 검증한다.
      */
-    public function checkAcnt(string $acnt): int
+    public function checkAccount(string $acnt): int
     {
         $foundUser = User::where('ACCOUNT', $acnt)->first();
         

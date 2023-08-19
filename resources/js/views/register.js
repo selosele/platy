@@ -9,12 +9,12 @@ validate('#registerForm', function() {
   });
 });
 
-document.querySelector('#account').addEventListener('keyup', checkAcnt);
+document.querySelector('#account').addEventListener('keyup', checkAccount);
 document.querySelector('#password').addEventListener('keyup', detectCapsLockKey);
 document.querySelector('#passwordChk').addEventListener('keyup', detectCapsLockKey);
 
 /** 아이디의 중복을 검증한다. */
-function checkAcnt(e) {
+function checkAccount(e) {
   const target = e.target;
   const submitBtn = document.querySelector('#registerBtn');
 
