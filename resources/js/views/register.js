@@ -25,7 +25,7 @@ function checkAccount(e) {
   }
   
   // 아이디 중복 검증
-  http.get(`/auth/check-acnt/${target.value}`)
+  http.get(`/auth/check-account/${target.value}`)
   .then(resp => {
 
     // 0: 중복 X, 1: 중복

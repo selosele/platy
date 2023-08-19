@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 /**
- * 회원가입 컨트롤러
+ * 회원가입 Controller
  */
 class RegisterController extends Controller
 {
@@ -52,9 +52,9 @@ class RegisterController extends Controller
     /**
      * 아이디의 중복을 검증한다.
      */
-    public function checkAccount(string $acnt): int
+    public function checkAccount(string $account): int
     {
-        $foundUser = User::where('ACCOUNT', $acnt)->first();
+        $foundUser = User::where('ACCOUNT', $account)->first();
         
         // 유저가 존재하면 1, 아니면 0을 반환
         return $foundUser ? 1 : 0;
