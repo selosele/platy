@@ -48,5 +48,5 @@
 @endsection
 
 @push('js')
-  @vite('resources/js/views/register.js')
+  @vite('resources/js/views/content/register.js')
 @endpush

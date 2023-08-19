@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { http, isBlank, message, validate, addValidationError, removeValidationError } from '../global/utils';
+import { http, isBlank, message, validate, addValidationError, removeValidationError } from '../../global/utils';
 
 // 회원가입 Form 유효성 검증
 validate('#registerForm', function() {

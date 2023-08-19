@@ -170,6 +170,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\CustomViewServiceProvider::class,
         App\Providers\ConsoleServiceProvider::class,
+        App\Providers\QueryListenerServiceProvider::class,
     ])->toArray(),
 
     /*

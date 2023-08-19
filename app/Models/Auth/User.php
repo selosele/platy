@@ -21,6 +21,16 @@ class User extends Authenticatable
     protected $table = 'MEMBER';
 
     /**
+     * 기본 키
+     */
+    protected $primaryKey = 'NO';
+
+    /**
+     * 기본 키의 데이터 타입
+     */
+    protected $keyType = 'string';
+
+    /**
      * timestamps 비활성화
      */
     public $timestamps = false;
@@ -44,7 +54,7 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'PASSWORD',
-        'remember_token',
+        // 'remember_token',
     ];
 
     /**
@@ -53,7 +63,7 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        // 'email_verified_at' => 'datetime',
         'PASSWORD' => 'hashed',
         'REG_DATE' => 'datetime',
     ];
