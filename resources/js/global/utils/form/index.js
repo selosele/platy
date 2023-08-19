@@ -21,3 +21,10 @@ export function validate(form, callback) {
 export function validationError(field) {
   return 0 < document.querySelectorAll(`.parsley-${field}`).length ? true : false;
 }
+
+/** 유효성 오류를 생성한다. */
+export function addValidationError(el, field, options) {
+  if (!validationError(field)) {
+    $(el).parsley().addError(field, options);
+  }
+}

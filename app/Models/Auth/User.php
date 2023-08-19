@@ -31,10 +31,10 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'MEM_ACNT',
-        'MEM_EMAIL',
-        'MEM_NKNM',
-        'MEM_PSWD',
+        'ACCOUNT',
+        'EMAIL',
+        'NICKNAME',
+        'PASSWORD',
     ];
 
     /**
@@ -43,7 +43,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'MEM_PSWD',
+        'PASSWORD',
         'remember_token',
     ];
 
@@ -54,7 +54,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'MEM_PSWD' => 'hashed',
-        'MEM_REG_DT' => 'datetime',
+        'PASSWORD' => 'hashed',
+        'REG_DATE' => 'datetime',
     ];
 }

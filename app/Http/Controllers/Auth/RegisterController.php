@@ -32,17 +32,17 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         $request->validate([
-            'memAcnt'  => 'required|string|max:20|unique:MEMBER,MEM_ACNT',
-            'memEmail' => 'required|string|email',
-            'memNknm'  => 'required|string|max:20',
-            'memPswd'  => 'required|string|min:6|max:30|confirmed',
+            'account'  => 'required|string|max:20|unique:MEMBER,ACCOUNT',
+            'email'    => 'required|string|email',
+            'nickname' => 'required|string|max:20',
+            'password' => 'required|string|min:6|max:30|confirmed',
         ]);
         
         User::create([
-            'MEM_ACNT'  => $request['memAcnt'],
-            'MEM_EMAIL' => $request['memEmail'],
-            'MEM_NKNM'  => $request['memNknm'],
-            'MEM_PSWD'  => Hash::make($request['memPswd']),
+            'ACCOUNT'  => $request['account'],
+            'EMAIL'    => $request['email'],
+            'NICKNAME' => $request['nickname'],
+            'PASSWORD' => Hash::make($request['password']),
         ]);
 
         return redirect($this->redirectTo)
@@ -54,7 +54,7 @@ class RegisterController extends Controller
      */
     public function checkAcnt(string $acnt): int
     {
-        $foundUser = User::where('MEM_ACNT', $acnt)->first();
+        $foundUser = User::where('ACCOUNT', $acnt)->first();
         
         // 유저가 존재하면 1, 아니면 0을 반환
         return $foundUser ? 1 : 0;

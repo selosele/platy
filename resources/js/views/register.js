@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { validationError, http, isBlank, message, validate } from '../global/utils';
+import { http, isBlank, message, validate, addValidationError } from '../global/utils';
 
 // 회원가입 Form 유효성 검증
 validate('#registerForm', function() {
@@ -9,9 +9,9 @@ validate('#registerForm', function() {
   });
 });
 
-document.querySelector('#memAcnt').addEventListener('keyup', checkAcnt);
-document.querySelector('#memPswd').addEventListener('keyup', detectCapsLockKey);
-document.querySelector('#memPswdChk').addEventListener('keyup', detectCapsLockKey);
+document.querySelector('#account').addEventListener('keyup', checkAcnt);
+document.querySelector('#password').addEventListener('keyup', detectCapsLockKey);
+document.querySelector('#passwordChk').addEventListener('keyup', detectCapsLockKey);
 
 /** 아이디의 중복을 검증한다. */
 function checkAcnt(e) {
@@ -31,16 +31,12 @@ function checkAcnt(e) {
     // 0: 중복 X, 1: 중복
     if (resp.data === 1) {
       submitBtn.setAttribute('disabled', true);
-
-      if (!validationError('wrongId')) {
-        $('#memAcnt').parsley().addError('wrongId', { message: '사용할 수 없는 아이디입니다.' });
-      }
-      
+      addValidationError('#account', 'wrongId', { message: '사용할 수 없는 아이디입니다.' });
       return;
     }
     
     submitBtn.removeAttribute('disabled');
-    $('#memAcnt').parsley().removeError('wrongId');
+    $('#account').parsley().removeError('wrongId');
   });
 }
 
@@ -48,11 +44,7 @@ function checkAcnt(e) {
 function detectCapsLockKey(e) {
   if (e.getModifierState('CapsLock')) {
     e.target.classList.add('is-invalid');
-
-    if (!validationError(`capsLock-${e.target.id}`)) {
-      $(e.target).parsley().addError(`capsLock-${e.target.id}`, { message: 'CapsLock키가 켜져 있습니다.' });
-    }
-    
+    addValidationError(e.target, `capsLock-${e.target.id}`, { message: 'CapsLock키가 켜져 있습니다.' });
     return;
   }
 

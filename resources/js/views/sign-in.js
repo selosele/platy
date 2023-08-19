@@ -2,18 +2,18 @@ import { isBlank } from "../global/utils";
 
 /** 로그인 form 값이 유효한지 확인한다. */
 // function isValid() {
-//   const memAcnt = document.querySelector('#memAcnt');
-//   const memPswd = document.querySelector('#memPswd');
+//   const account = document.querySelector('#account');
+//   const password = document.querySelector('#password');
 
-//   if (isBlank(memAcnt.value)) {
+//   if (isBlank(account.value)) {
 //     alert('아이디를 입력하세요.');
-//     memAcnt.focus();
+//     account.focus();
 //     return false;
 //   }
 
-//   if (isBlank(memPswd.value)) {
+//   if (isBlank(password.value)) {
 //     alert('비밀번호를 입력하세요.');
-//     memPswd.focus();
+//     password.focus();
 //     return false;
 //   }
 

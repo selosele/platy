@@ -14,13 +14,13 @@
   <form method="post" action="/auth/sign-in" id="signInForm">
     @csrf
     <div class="input-group mb-3">
-      <label for="memAcnt" class="input-group-text">아이디</label>
-      <input type="text" class="form-control" id="memAcnt" name="memAcnt" placeholder="아이디를 입력하세요">
+      <label for="account" class="input-group-text">아이디</label>
+      <input type="text" class="form-control" id="account" name="account" placeholder="아이디를 입력하세요">
     </div>
 
     <div class="input-group mb-3">
-      <label for="memPswd" class="input-group-text">비밀번호</label>
-      <input type="password" class="form-control" id="memPswd" name="memPswd" placeholder="비밀번호를 입력하세요">
+      <label for="password" class="input-group-text">비밀번호</label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="비밀번호를 입력하세요">
     </div>
 
     <div class="form-check mb-3">
