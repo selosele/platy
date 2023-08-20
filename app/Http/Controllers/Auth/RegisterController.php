@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Auth\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 /**
@@ -24,11 +23,6 @@ class RegisterController extends Controller
      */
     public function page()
     {
-        // 인증된 사용자는 메인 페이지로 이동
-        if (Auth::check()) {
-            return redirect('/');
-        }
-        
         return view('auth.register');
     }
 
