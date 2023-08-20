@@ -54,7 +54,7 @@ class SignInOutController extends Controller
         $foundUser = User::where('ACCOUNT', $credentials['account'])->first();
 
         if ($this->authService->canSignIn($foundUser, $credentials['password'])) {
-            Auth::login($foundUser);
+            Auth::login($foundUser, $request->filled('remember'));
 
             return redirect('/');
         }
