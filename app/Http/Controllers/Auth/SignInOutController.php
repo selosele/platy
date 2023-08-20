@@ -8,7 +8,6 @@ use App\Models\Auth\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 
 /**
  * 로그인/로그아웃 Controller
