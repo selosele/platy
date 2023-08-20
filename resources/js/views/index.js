@@ -9,10 +9,10 @@ if (signOutBtn) {
     e.preventDefault();
   
     message.confirmSuccess('로그아웃하시겠습니까?')
-      .then(confirm => {
-        if (!confirm) { return; }
-  
-        location.href = e.target.href;
-      });
+    .then(confirm => {
+      if (!confirm) { return; }
+
+      location.href = e.target.href;
+    });
   });
 }
